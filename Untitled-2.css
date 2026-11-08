@@ -1,0 +1,156 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Georgia, serif;
+    background: linear-gradient(
+        135deg,
+        #ffe4ed,
+        #fff5f8,
+        #ffd6e5
+    );
+}
+
+/* Cachorrinhos animados */
+.dog {
+    position: fixed;
+    bottom: -100px;
+    font-size: 45px;
+    animation: subir 15s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.dog:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.dog:nth-child(2) {
+    left: 20%;
+    animation-delay: 4s;
+}
+
+.dog:nth-child(3) {
+    left: 40%;
+    animation-delay: 2s;
+}
+
+.dog:nth-child(4) {
+    left: 60%;
+    animation-delay: 7s;
+}
+
+.dog:nth-child(5) {
+    left: 80%;
+    animation-delay: 3s;
+}
+
+.dog:nth-child(6) {
+    left: 92%;
+    animation-delay: 9s;
+}
+
+@keyframes subir {
+    0% {
+        transform: translateY(0) rotate(-10deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: translateY(-50vh) rotate(15deg);
+    }
+
+    100% {
+        transform: translateY(-120vh) rotate(-15deg);
+        opacity: 0;
+    }
+}
+
+/* Cartinha */
+.card {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 600px;
+    padding: 40px 30px;
+    text-align: center;
+    background: rgba(255,255,255,0.9);
+    border: 2px solid #ffc4d7;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px #d88da855;
+    animation: aparecer 1.5s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Coração */
+.heart {
+    font-size: 55px;
+    color: #ed709b;
+    animation: pulsar 1.5s infinite;
+}
+
+@keyframes pulsar {
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Título */
+h1 {
+    color: #c45b83;
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+/* Parágrafos */
+p {
+    color: #76515f;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+/* Destaque */
+.destaque {
+    color: #d45c89;
+    font-style: italic;
+}
+
+/* Assinatura */
+.assinatura {
+    color: #c45b83;
+    font-size: 21px;
+    margin-top: 25px;
+    font-style: italic;
+}
+
+/* Patinhas */
+.patinha {
+    font-size: 25px;
+    margin-top: 15px;
+}
